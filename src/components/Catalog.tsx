@@ -5,9 +5,6 @@ import { CatalogItem } from './CatalogItem';
 
 export function Catalog() {
   const [catalog, setCatalog] = useState<IProduct[]>([]);
-  // const catalog = useSelector(state => state);
-
-  // console.log(catalog);
 
   useEffect(() => {
     api.get('products').then((res) => {
